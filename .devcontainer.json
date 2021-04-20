@@ -1,0 +1,10 @@
+{
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:14",
+"forwardPorts": [
+	3000
+],
+"extensions": [
+	"esbenp.prettier-vscode",
+	"arcanis.vscode-zipfs"
+],
+}
