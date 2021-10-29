@@ -52,6 +52,8 @@ app.get('/cluster/*', async (req, res) => {
       return res.sendStatus(404)
     }
 
+    res.set('content-type', 'application/json')
+    res.set('access-control-allow-origin', '*')
     return res.json(data)
 
   } catch (error) {
