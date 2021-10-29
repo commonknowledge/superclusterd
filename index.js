@@ -41,7 +41,7 @@ app.get('/cluster/*', async (req, res) => {
 
     await cluster.load({ refetch: false })
     
-    const data = cluster.get(JSON.parse(bbox), Number(zoom))
+    const data = cluster.get(JSON.parse(bbox), Math.round(Number(zoom)))
     
     // Stale-while-revalidate so that we keep requests from the frontend nice and snappy
     cluster.load({ refetch: true }).catch(error => {
