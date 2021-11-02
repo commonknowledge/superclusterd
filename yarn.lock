@@ -575,6 +575,8 @@ __metadata:
     lru-cache: ^6.0.0
     react: ^17.0.2
     supercluster: ^7.1.3
+  peerDependencies:
+    react: ^17.0.2
   bin:
     superclusterd: superclusterd.js
   languageName: unknown
