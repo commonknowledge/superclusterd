@@ -5,12 +5,9 @@ export const useClusteredMapData = (
   supercluster,
   dimensions,
   viewport,
-  getUrl,
-  deps = []
+  url,
 ) => {
   const [state, setState] = useState();
-  const url = useMemo(getUrl, deps);
-
   const fireUpdate = useDebounced(fetchViewport, setState, 500);
 
   useEffect(() => {
@@ -38,8 +35,6 @@ const fetchViewport = ({ supercluster, dimensions, viewport, url }) =>
 
 const useDebounced = (fn, onComplete, delay) => {
   return useMemo(() => {
-    return debounce(async () => {
-      onComplete(await fn());
-    }, delay);
-  }, []);
+    return debounce((...args) => fn(...args).then(onComplete), delay)
+  }, [])
 };

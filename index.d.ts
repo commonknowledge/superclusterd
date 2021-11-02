@@ -1,3 +1,5 @@
+import {Feature, Point} from 'geojson'
+
 export interface Viewport {
   latitude: number;
   longitude: number;
@@ -15,18 +17,15 @@ export interface Cluster {
   point_count: number;
 }
 
-type Clusterable<T> =
-  | Cluster
-  | (T & {
-      cluster: false;
-    });
+export type ClusteredFeature<T> =
+  | Feature<Point, T & { cluster?: false }>
+  | Feature<Point, Cluster>
 
-type BBox = [[number, number], [number, number]]
 type BBox = [[number, number], [number, number]]
 
 export class Superclusterd {
   constructor(serviceUrl: string)
 
-  fetchBBox<T>(url: string, bbox: BBox, zoom: number): Promise<Clusterable<T>>
-  fetchViewport<T>(url: string, dimensions: Dimensions, viewport: Viewport): Promise<Clusterable<T>>
+  fetchBBox<T>(url: string, bbox: BBox, zoom: number): Promise<ClusteredFeature<T>[]>
+  fetchViewport<T>(url: string, dimensions: Dimensions, viewport: Viewport): Promise<ClusteredFeature<T>[]>
 }

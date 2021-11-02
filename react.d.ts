@@ -1,9 +1,8 @@
-import { Dimensions, Supercluster, Viewport } from ".";
+import { Dimensions, Superclusterd, Viewport, ClusteredFeature } from ".";
 
 export function useClusteredMapData<T>(
-  supercluster: Supercluster,
+  supercluster: Superclusterd,
   dimensions: Dimensions,
   viewport: Viewport,
-  getUrl: () => string,
-  deps: unknown[] = []
-): Clusterable<T> | undefined
+  url: string,
+): ClusteredFeature<T>[] | undefined

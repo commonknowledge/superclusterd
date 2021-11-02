@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@math.gl/web-mercator", "npm:3.5.6"],
+            ["@types/geojson", "npm:7946.0.8"],
             ["async-mutex", "npm:0.3.1"],
             ["cross-fetch", "npm:3.1.4"],
             ["express", "npm:4.17.1"],
@@ -66,6 +67,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@math.gl/web-mercator", "npm:3.5.6"],
             ["@babel/runtime", "npm:7.16.0"],
             ["gl-matrix", "npm:3.3.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/geojson", [
+        ["npm:7946.0.8", {
+          "packageLocation": "./.yarn/cache/@types-geojson-npm-7946.0.8-df9187edab-2d9628afd0.zip/node_modules/@types/geojson/",
+          "packageDependencies": [
+            ["@types/geojson", "npm:7946.0.8"]
           ],
           "linkType": "HARD",
         }]
@@ -715,6 +725,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["superclusterd", "workspace:."],
             ["@math.gl/web-mercator", "npm:3.5.6"],
+            ["@types/geojson", "npm:7946.0.8"],
             ["async-mutex", "npm:0.3.1"],
             ["cross-fetch", "npm:3.1.4"],
             ["express", "npm:4.17.1"],
