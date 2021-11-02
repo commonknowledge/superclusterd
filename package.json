@@ -1,15 +1,13 @@
 {
   "name": "superclusterd",
   "version": "1.0.1",
-  "main": "index.js",
-  "bin": {
-    "superclusterd": "index.js"
-  },
+  "main": "superclusterd.js",
+  "bin": "superclusterd.js",
   "files": [
-    "index.js"
+    "superclusterd.js"
   ],
   "scripts": {
-    "start": "node index.js"
+    "start": "node superclusterd.js"
   },
   "license": "MIT",
   "dependencies": {

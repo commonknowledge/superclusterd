@@ -19,14 +19,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],
     "dependencyTreeRoots": [
       {
-        "name": "mapbox-ingest",
+        "name": "superclusterd",
         "reference": "workspace:."
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["mapbox-ingest", ["workspace:."]]
+      ["superclusterd", ["workspace:."]]
     ],
     "fallbackPool": [
     ],
@@ -379,20 +379,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["mapbox-ingest", [
-        ["workspace:.", {
-          "packageLocation": "./",
-          "packageDependencies": [
-            ["mapbox-ingest", "workspace:."],
-            ["async-mutex", "npm:0.3.1"],
-            ["cross-fetch", "npm:3.1.4"],
-            ["express", "npm:4.17.1"],
-            ["lru-cache", "npm:6.0.0"],
-            ["supercluster", "npm:7.1.3"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
       ["media-typer", [
         ["npm:0.3.0", {
           "packageLocation": "./.yarn/cache/media-typer-npm-0.3.0-8674f8f0f5-be1c825782.zip/node_modules/media-typer/",
@@ -631,6 +617,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["kdbush", "npm:3.0.0"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["superclusterd", [
+        ["workspace:.", {
+          "packageLocation": "./",
+          "packageDependencies": [
+            ["superclusterd", "workspace:."],
+            ["async-mutex", "npm:0.3.1"],
+            ["cross-fetch", "npm:3.1.4"],
+            ["express", "npm:4.17.1"],
+            ["lru-cache", "npm:6.0.0"],
+            ["supercluster", "npm:7.1.3"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["toidentifier", [

@@ -285,20 +285,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mapbox-ingest@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "mapbox-ingest@workspace:."
-  dependencies:
-    async-mutex: ^0.3.1
-    cross-fetch: ^3.1.4
-    express: ^4.17.1
-    lru-cache: ^6.0.0
-    supercluster: ^7.1.3
-  bin:
-    superclusterd: index.js
-  languageName: unknown
-  linkType: soft
-
 "media-typer@npm:0.3.0":
   version: 0.3.0
   resolution: "media-typer@npm:0.3.0"
@@ -501,6 +487,20 @@ __metadata:
   checksum: 2a16571c02892a733811533085e8c02d74674c834298691a6cbba5baae856cd8c8f6fe1bdd45200ddafdcf2d19b090b1ff115753d03f34dcb55d29b2df1b4181
   languageName: node
   linkType: hard
+
+"superclusterd@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "superclusterd@workspace:."
+  dependencies:
+    async-mutex: ^0.3.1
+    cross-fetch: ^3.1.4
+    express: ^4.17.1
+    lru-cache: ^6.0.0
+    supercluster: ^7.1.3
+  bin:
+    superclusterd: superclusterd.js
+  languageName: unknown
+  linkType: soft
 
 "toidentifier@npm:1.0.0":
   version: 1.0.0
