@@ -37,13 +37,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@math.gl/web-mercator", "npm:3.5.6"],
             ["async-mutex", "npm:0.3.1"],
             ["cross-fetch", "npm:3.1.4"],
             ["express", "npm:4.17.1"],
+            ["lodash.debounce", "npm:4.0.8"],
             ["lru-cache", "npm:6.0.0"],
+            ["react", "npm:17.0.2"],
             ["supercluster", "npm:7.1.3"]
           ],
           "linkType": "SOFT",
+        }]
+      ]],
+      ["@babel/runtime", [
+        ["npm:7.16.0", {
+          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.16.0-2f490bebb5-336e7f3ff6.zip/node_modules/@babel/runtime/",
+          "packageDependencies": [
+            ["@babel/runtime", "npm:7.16.0"],
+            ["regenerator-runtime", "npm:0.13.9"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@math.gl/web-mercator", [
+        ["npm:3.5.6", {
+          "packageLocation": "./.yarn/cache/@math.gl-web-mercator-npm-3.5.6-a9a6a324ae-ec4e4fd0c6.zip/node_modules/@math.gl/web-mercator/",
+          "packageDependencies": [
+            ["@math.gl/web-mercator", "npm:3.5.6"],
+            ["@babel/runtime", "npm:7.16.0"],
+            ["gl-matrix", "npm:3.3.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["accepts", [
@@ -299,6 +323,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["gl-matrix", [
+        ["npm:3.3.0", {
+          "packageLocation": "./.yarn/cache/gl-matrix-npm-3.3.0-02575e3b95-d75bac9b6b.zip/node_modules/gl-matrix/",
+          "packageDependencies": [
+            ["gl-matrix", "npm:3.3.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["http-errors", [
         ["npm:1.7.2", {
           "packageLocation": "./.yarn/cache/http-errors-npm-1.7.2-67163ae1df-8ce4a4af05.zip/node_modules/http-errors/",
@@ -360,11 +393,39 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["js-tokens", [
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/js-tokens-npm-4.0.0-0ac852e9e2-1fc4e4667a.zip/node_modules/js-tokens/",
+          "packageDependencies": [
+            ["js-tokens", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["kdbush", [
         ["npm:3.0.0", {
           "packageLocation": "./.yarn/cache/kdbush-npm-3.0.0-3f45162b37-c7dc26df97.zip/node_modules/kdbush/",
           "packageDependencies": [
             ["kdbush", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.debounce", [
+        ["npm:4.0.8", {
+          "packageLocation": "./.yarn/cache/lodash.debounce-npm-4.0.8-f1d6e09799-b6042bd8c0.zip/node_modules/lodash.debounce/",
+          "packageDependencies": [
+            ["lodash.debounce", "npm:4.0.8"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["loose-envify", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/loose-envify-npm-1.4.0-6307b72ccf-5c3b47bbe5.zip/node_modules/loose-envify/",
+          "packageDependencies": [
+            ["loose-envify", "npm:1.4.0"],
+            ["js-tokens", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -468,6 +529,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["object-assign", [
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/object-assign-npm-4.1.1-1004ad6dec-66cf021898.zip/node_modules/object-assign/",
+          "packageDependencies": [
+            ["object-assign", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["on-finished", [
         ["npm:2.3.0", {
           "packageLocation": "./.yarn/cache/on-finished-npm-2.3.0-4ce92f72c6-362e646082.zip/node_modules/on-finished/",
@@ -534,6 +604,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["http-errors", "npm:1.7.2"],
             ["iconv-lite", "npm:0.4.24"],
             ["unpipe", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["react", [
+        ["npm:17.0.2", {
+          "packageLocation": "./.yarn/cache/react-npm-17.0.2-99ba37d931-7d0dfebafe.zip/node_modules/react/",
+          "packageDependencies": [
+            ["react", "npm:17.0.2"],
+            ["loose-envify", "npm:1.4.0"],
+            ["object-assign", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["regenerator-runtime", [
+        ["npm:0.13.9", {
+          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.9-6d02340eec-8587f99ed6.zip/node_modules/regenerator-runtime/",
+          "packageDependencies": [
+            ["regenerator-runtime", "npm:0.13.9"]
           ],
           "linkType": "HARD",
         }]
@@ -624,10 +714,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["superclusterd", "workspace:."],
+            ["@math.gl/web-mercator", "npm:3.5.6"],
             ["async-mutex", "npm:0.3.1"],
             ["cross-fetch", "npm:3.1.4"],
             ["express", "npm:4.17.1"],
+            ["lodash.debounce", "npm:4.0.8"],
             ["lru-cache", "npm:6.0.0"],
+            ["react", "npm:17.0.2"],
             ["supercluster", "npm:7.1.3"]
           ],
           "linkType": "SOFT",

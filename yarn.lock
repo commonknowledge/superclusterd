@@ -5,6 +5,25 @@ __metadata:
   version: 4
   cacheKey: 7
 
+"@babel/runtime@npm:^7.12.0":
+  version: 7.16.0
+  resolution: "@babel/runtime@npm:7.16.0"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: 336e7f3ff6e7ecda749683c794eb5215410a2de1ec2845a39cbbd5eec870400aa68b9cc21dc44bf74d62e47682d0d0fb0600f263d218a23ba39f9cf6f1b7b54c
+  languageName: node
+  linkType: hard
+
+"@math.gl/web-mercator@npm:^3.5.6":
+  version: 3.5.6
+  resolution: "@math.gl/web-mercator@npm:3.5.6"
+  dependencies:
+    "@babel/runtime": ^7.12.0
+    gl-matrix: ~3.3.0
+  checksum: ec4e4fd0c6ed2b4ce01f83a693f8514eab6678be4bcd6e906b7c78222ef76b1094e15756df917b8111adedb1a157aa54d1c90bec39b9e241adcd237e381518a8
+  languageName: node
+  linkType: hard
+
 "accepts@npm:~1.3.7":
   version: 1.3.7
   resolution: "accepts@npm:1.3.7"
@@ -213,6 +232,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gl-matrix@npm:~3.3.0":
+  version: 3.3.0
+  resolution: "gl-matrix@npm:3.3.0"
+  checksum: d75bac9b6b40d6a97c8fd507e76129dae91d84685d5eaf622600ddc811f31fe89d917bb5ddbf8575ce19cf7a993a10bcd5db138ba9bdf2630cf53ec43dc7afa0
+  languageName: node
+  linkType: hard
+
 "http-errors@npm:1.7.2":
   version: 1.7.2
   resolution: "http-errors@npm:1.7.2"
@@ -269,10 +295,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-tokens@npm:^3.0.0 || ^4.0.0":
+  version: 4.0.0
+  resolution: "js-tokens@npm:4.0.0"
+  checksum: 1fc4e4667ac2d972aba65148b9cbf9c17566b2394d3504238d8492bbd3e68f496c657eab06b26b40b17db5cac0a34d153a12130e2d2d2bb6dc2cdc8a4764eb1b
+  languageName: node
+  linkType: hard
+
 "kdbush@npm:^3.0.0":
   version: 3.0.0
   resolution: "kdbush@npm:3.0.0"
   checksum: c7dc26df97d444cb81ee870fed64b095a3c42e515143895128306123c4ffbd473e8df026e6bcd17bc9e4c33fdf2bb4c2901a3b60f864d39947bbfc0ae7fb2af2
+  languageName: node
+  linkType: hard
+
+"lodash.debounce@npm:^4.0.8":
+  version: 4.0.8
+  resolution: "lodash.debounce@npm:4.0.8"
+  checksum: b6042bd8c09ff1961c9127d32266316bc21f946ece5e3464a663ec61fadb98e7d56ec0ef7e23b47d393695310c19cf24e651c1756be6da91ac02c72be7f79465
+  languageName: node
+  linkType: hard
+
+"loose-envify@npm:^1.1.0":
+  version: 1.4.0
+  resolution: "loose-envify@npm:1.4.0"
+  dependencies:
+    js-tokens: ^3.0.0 || ^4.0.0
+  bin:
+    loose-envify: cli.js
+  checksum: 5c3b47bbe5f597a3889fb001a3a98aaea2a3fafa48089c19034de1e0121bf57dbee609d184478514d74d5c5a7e9cfa3d846343455e5123b060040d46c39e91dc
   languageName: node
   linkType: hard
 
@@ -359,6 +410,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"object-assign@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "object-assign@npm:4.1.1"
+  checksum: 66cf021898fc1b13ea573ea8635fbd5a76533f50cecbc2fcd5eee1e8029af41bcebe7023788b6d0e06cbe4401ecea075d972f78ec74467cdc571a0f1a4d1a081
+  languageName: node
+  linkType: hard
+
 "on-finished@npm:~2.3.0":
   version: 2.3.0
   resolution: "on-finished@npm:2.3.0"
@@ -415,6 +473,23 @@ __metadata:
     iconv-lite: 0.4.24
     unpipe: 1.0.0
   checksum: 46dc02f8b4f358786d41e18fb55533fbe4702d390e22bbe2b9c98c88dec41cab23ea2315f3ae0bf4bc0213a2872c89943d3df6857f4e21f996ea9d2d92f1bcaa
+  languageName: node
+  linkType: hard
+
+"react@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react@npm:17.0.2"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+  checksum: 7d0dfebafe1d297503157abb2e9acdb49852185deb8700c16f4a6faad87642f84903ab18cfc16f40b9a0dfe97540f99834982ee953e6d48b39c41608dc3e4b29
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.4":
+  version: 0.13.9
+  resolution: "regenerator-runtime@npm:0.13.9"
+  checksum: 8587f99ed63493b9ce34375f426b8ec61bf380681a374d5f2460c14ae2c289114702bed1f565a2499e809f2ba6d8ecd25a8dfee54bc224171f20a95a249be242
   languageName: node
   linkType: hard
 
@@ -492,10 +567,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "superclusterd@workspace:."
   dependencies:
+    "@math.gl/web-mercator": ^3.5.6
     async-mutex: ^0.3.1
     cross-fetch: ^3.1.4
     express: ^4.17.1
+    lodash.debounce: ^4.0.8
     lru-cache: ^6.0.0
+    react: ^17.0.2
     supercluster: ^7.1.3
   bin:
     superclusterd: superclusterd.js
