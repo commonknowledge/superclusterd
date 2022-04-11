@@ -103,7 +103,16 @@ class Index {
         return;
       }
 
-      const index = new Supercluster();
+      const index = new Supercluster({
+        map: (props) => {
+          return {
+            features: [props]
+          }
+        },
+        reduce: (accumulated, props) => {
+          accumulated.features = [...accumulated.features, ...props.features]
+        },
+      });
       const { features } = await res.json();
 
       this.lastFetch = Date.now();
