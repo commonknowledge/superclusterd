@@ -11,10 +11,11 @@ export interface Dimensions {
   height: number
 }
 
-export interface Cluster {
+export interface Cluster<Properties = any> {
   cluster: true;
   cluster_id: number;
   point_count: number;
+  features: Array<Properties>
 }
 
 export type ClusteredFeature<T> =
